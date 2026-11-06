@@ -1,0 +1,19 @@
+NAME                                                   READY   STATUS    RESTARTS   AGE     IP            NODE            NOMINATED NODE   READINESS GATES
+pod/argocd-application-controller-0                    1/1     Running   0          8m22s   10.244.1.16   worker-node-1   <none>           <none>
+pod/argocd-applicationset-controller-f6bc6968d-z4t6p   1/1     Running   0          8m24s   10.244.2.11   worker-node-2   <none>           <none>
+pod/argocd-dex-server-55b9777447-pg6kw                 1/1     Running   0          8m24s   10.244.1.14   worker-node-1   <none>           <none>
+pod/argocd-notifications-controller-b9499f64b-q2w5b    1/1     Running   0          8m24s   10.244.2.12   worker-node-2   <none>           <none>
+pod/argocd-redis-79f897d5d9-4t2fx                      1/1     Running   0          8m23s   10.244.1.15   worker-node-1   <none>           <none>
+pod/argocd-repo-server-75fcf89b6b-v5tzt                1/1     Running   0          8m23s   10.244.2.13   worker-node-2   <none>           <none>
+pod/argocd-server-67795db55d-kjsp8                     1/1     Running   0          8m22s   10.244.2.14   worker-node-2   <none>           <none>
+
+NAME                                              TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE     SELECTOR
+service/argocd-application-controller             ClusterIP   None            <none>        <none>                       8m26s   app.kubernetes.io/name=argocd-application-controller
+service/argocd-applicationset-controller          ClusterIP   10.96.166.198   <none>        7000/TCP,8080/TCP            8m26s   app.kubernetes.io/name=argocd-applicationset-controller
+service/argocd-dex-server                         ClusterIP   10.96.75.108    <none>        5556/TCP,5557/TCP,5558/TCP   8m26s   app.kubernetes.io/name=argocd-dex-server
+service/argocd-metrics                            ClusterIP   10.96.246.146   <none>        8082/TCP                     8m26s   app.kubernetes.io/name=argocd-application-controller
+service/argocd-notifications-controller-metrics   ClusterIP   10.96.44.128    <none>        9001/TCP                     8m26s   app.kubernetes.io/name=argocd-notifications-controller
+service/argocd-redis                              ClusterIP   10.96.17.172    <none>        6379/TCP                     8m26s   app.kubernetes.io/name=argocd-redis
+service/argocd-repo-server                        ClusterIP   10.96.65.30     <none>        8081/TCP,8084/TCP            8m25s   app.kubernetes.io/name=argocd-repo-server
+service/argocd-server                             ClusterIP   10.96.72.9      <none>        80/TCP,443/TCP               8m25s   app.kubernetes.io/name=argocd-server
+service/argocd-server-metrics                     ClusterIP   10.96.133.247   <none>        8083/TCP                     8m25s   app.kubernetes.io/name=argocd-server

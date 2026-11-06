@@ -1,0 +1,15 @@
+# Deliberately broken Application: path "manifest" (typo) does not exist in the repo
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: broken-path-demo
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/DechenWangdraSherpa/DSO202-Practical4.git
+    targetRevision: HEAD
+    path: manifest
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo-app-broken

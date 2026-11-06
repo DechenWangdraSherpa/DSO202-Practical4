@@ -1,0 +1,21 @@
+LAST SEEN   TYPE     REASON               OBJECT                  MESSAGE
+2m54s       Normal   OperationStarted     application/my-webapp   Initiated automated sync to 'dedd4eb92d8a07d0147a130308cbd8354caf9cb4'
+2m54s       Normal   ResourceUpdated      application/my-webapp   Updated sync status:  -> OutOfSync
+2m54s       Normal   ResourceUpdated      application/my-webapp   Updated health status:  -> Missing
+2m52s       Normal   ResourceUpdated      application/my-webapp   Updated health status: Missing -> Healthy
+2m52s       Normal   OperationCompleted   application/my-webapp   Sync operation to dedd4eb92d8a07d0147a130308cbd8354caf9cb4 succeeded
+2m52s       Normal   ResourceUpdated      application/my-webapp   Updated sync status: OutOfSync -> Synced
+2m52s       Normal   ResourceUpdated      application/my-webapp   Updated health status: Healthy -> Progressing (Caused by apps/Deployment:demo-app/webapp-deploy)
+2m51s       Normal   ResourceUpdated      application/my-webapp   Updated health status: Progressing -> Healthy
+85s         Normal   OperationStarted     application/my-webapp   Initiated automated sync to 'b01611b276ab27f8a80024e7ba8c011b3ee892bf'
+85s         Normal   ResourceUpdated      application/my-webapp   Updated sync status: Synced -> OutOfSync
+83s         Normal   ResourceUpdated      application/my-webapp   Updated sync status: OutOfSync -> Synced
+83s         Normal   ResourceUpdated      application/my-webapp   Updated health status: Healthy -> Progressing (Caused by apps/Deployment:demo-app/webapp-deploy)
+83s         Normal   OperationCompleted   application/my-webapp   Sync operation to b01611b276ab27f8a80024e7ba8c011b3ee892bf succeeded
+79s         Normal   ResourceUpdated      application/my-webapp   Updated health status: Progressing -> Healthy
+26s         Normal   OperationStarted     application/my-webapp   Initiated automated sync to 'b01611b276ab27f8a80024e7ba8c011b3ee892bf'
+26s         Normal   ResourceUpdated      application/my-webapp   Updated sync status: Synced -> OutOfSync
+25s         Normal   OperationCompleted   application/my-webapp   Partial sync operation to b01611b276ab27f8a80024e7ba8c011b3ee892bf succeeded
+25s         Normal   ResourceUpdated      application/my-webapp   Updated sync status: OutOfSync -> Synced
+25s         Normal   ResourceUpdated      application/my-webapp   Updated health status: Healthy -> Progressing (Caused by apps/Deployment:demo-app/webapp-deploy)
+22s         Normal   ResourceUpdated      application/my-webapp   Updated health status: Progressing -> Healthy

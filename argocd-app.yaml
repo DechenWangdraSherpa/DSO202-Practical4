@@ -1,0 +1,27 @@
+# argocd-app.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-webapp
+  namespace: argocd # Argo CD Applications ALWAYS live in the argocd namespace
+spec:
+  project: default
+
+  # 1. WHERE IS THE DESIRED STATE? (GitHub)
+  source:
+    repoURL: https://github.com/DechenWangdraSherpa/DSO202-Practical4.git
+    targetRevision: HEAD
+    path: manifests
+
+  # 2. WHERE SHOULD IT BE DEPLOYED? (Our Kind Cluster)
+  destination:
+    server: https://kubernetes.default.svc # Internal address of the local cluster
+    namespace: demo-app # Target namespace for our app pods
+
+  # 3. HOW SHOULD ARGO CD SYNC IT?
+  syncPolicy:
+    automated:
+      prune: true    # Delete K8s resources if deleted from Git
+      selfHeal: true # Revert manual kubectl changes automatically
+    syncOptions:
+      - CreateNamespace=true # Automatically create 'demo-app' namespace

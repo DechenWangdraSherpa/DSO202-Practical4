@@ -1,0 +1,47 @@
+commit 3295f2b6a28ef4c2395b851ef2cee21b88d71771
+Author: Dechen Wangdra Sherpa <02230281.cst@rub.edu.bt>
+Date:   Fri Nov 6 22:54:02 2026 +0600
+
+    Revert "Remove webapp-svc (test prune)"
+    
+    This reverts commit 9fc84c825f44c16b3e884a465ed63e63c79c38f1.
+
+ manifests/service.yaml | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+commit 9fc84c825f44c16b3e884a465ed63e63c79c38f1
+Author: Dechen Wangdra Sherpa <02230281.cst@rub.edu.bt>
+Date:   Fri Nov 6 22:53:33 2026 +0600
+
+    Remove webapp-svc (test prune)
+
+ manifests/service.yaml | 12 ------------
+ 1 file changed, 12 deletions(-)
+
+commit b01611b276ab27f8a80024e7ba8c011b3ee892bf
+Author: Dechen Wangdra Sherpa <02230281.cst@rub.edu.bt>
+Date:   Fri Nov 6 22:51:47 2026 +0600
+
+    Scale webapp to 4 replicas
+
+ manifests/deployment.yaml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit dedd4eb92d8a07d0147a130308cbd8354caf9cb4
+Author: Dechen Wangdra Sherpa <02230281.cst@rub.edu.bt>
+Date:   Fri Nov 6 22:50:07 2026 +0600
+
+    Initial deployment with 2 replicas
+
+ manifests/deployment.yaml | 21 +++++++++++++++++++++
+ manifests/service.yaml    | 12 ++++++++++++
+ 2 files changed, 33 insertions(+)
+
+commit 910fac9fe6c4f2da8a9b946164e118df3209ba2c
+Author: Dechen Wangdra Sherpa <02230281.cst@rub.edu.bt>
+Date:   Fri Nov 6 22:44:10 2026 +0600
+
+    Practical4
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)

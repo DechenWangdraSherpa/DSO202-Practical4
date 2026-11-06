@@ -1,0 +1,43 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: my-webapp:/Service:demo-app/webapp-svc
+  name: webapp-svc
+  namespace: demo-app
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: webapp
+  type: ClusterIP
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: my-webapp:apps/Deployment:demo-app/webapp-deploy
+  labels:
+    app: webapp
+  name: webapp-deploy
+  namespace: demo-app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+      - image: nginxdemos/hello:plain-text
+        name: webapp
+        ports:
+        - containerPort: 80
+
